@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Your selected hospitals: </h1>
+    {% for hosp in check_list: %}
+        <h3>{{ hosp }}</h3>
+    {% endfor %}
+    <div class="center_card">
+        <form action="{{ url_for('sms_page') }}" method="post">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="form-floating mb-4">
+                        <h2>Enter your phone number:</h2>
+                        <input type="number" name="phone_num" class="phone_number form-control" id="floatingInput" required>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h2>Select date of appointment:</h2>
+                    <input class="phone_number" type="date" name="day">
+                </div>
+                <div class="col-lg-4">
+                    <button class="button btn btn-outline-dark" type="submit">Go</button>
+                </div>
+            </div>
+    </form>
+    </div>
+    {% block footer %}
+        <footer>&copy; 2021</footer>
+    {% endblock footer %}
+{% endblock %}

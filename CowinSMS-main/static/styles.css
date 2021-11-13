@@ -1,0 +1,88 @@
+body{
+    text-align: center;
+    background: url("bg_img.jpg");
+}
+
+h1{
+    margin-top: 50px;
+    text-align: center;
+    font-family: Zilla Slab;
+    font-weight: bold;
+    color: white;
+    font-size: 6em;
+
+}
+
+h2{
+    font-size: 3em;
+    margin: 10px;
+    border-right: solid;
+    border-color: gold;
+}
+
+h3{
+    font-family: Zilla Slab;
+    font-weight: bold;
+    color: white;
+    font-size: 4em;
+}
+
+td{
+    text-align: center;
+    font-family: Odibee Sans;
+    font-weight: thin;
+    font-size: 2em;
+}
+
+th{
+    text-align: center;
+    font-family: Pacifico;
+    color: white;
+    font-weight: thin;
+    font-size: 3em;
+}
+
+table{
+    opacity: 0.8;
+}
+
+.label_button{
+    font-family: Zilla Slab;
+    font-weight: thin;
+    font-size: 2em;
+}
+
+.button_table{
+    font-family: Zilla Slab;
+    font-weight: thin;
+    font-size: 1em;
+    width: 100%;
+}
+
+.center_card{
+    margin: 0px 100px;
+    padding: 10px;
+    background-color: #b284be;
+    border-radius: 25px;
+}
+
+.dropdown_menu{
+    margin-top: 20px;
+    width: 200px;
+    height: 30px;
+}
+
+.button{
+    font-family: Pacifico;
+    font-size: 2em;
+    margin: 0px;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+}
+
+.phone_number{
+    margin: 10px;
+    width: 300px;
+    font-size: 2em;
+}

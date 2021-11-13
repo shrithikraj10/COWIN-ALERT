@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container-fluid">
+                    <h1 >Unable to book an appointment?</h1>
+                    <h1>We got your back</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="center_card align-items-center">
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <h2>Please select your state</h2>
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <form action="{{ url_for('district_select')}}" method="post">
+                        <div class="form-floating mb-4">
+                            <input list="states"  name="state_name" class="phone_number form-control" id="floatingInput" required>
+                        </div>
+                        <datalist id="states">
+                            {% for state in state_list: %}
+                                <option value="{{ state['state_name'] }}"></option>
+                            {% endfor %}
+                        </datalist>
+                </div>
+                <div class="col-lg-3 col-sm-12">
+                    <button class="button btn btn-outline-dark" type="submit">Go</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% block footer %}
+<footer>&copy; 2021</footer>
+{% endblock footer %}
+{% endblock %}

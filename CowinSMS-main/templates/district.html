@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+          <h1>Select your district in {{ state_name }}</h1>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+      <div class="center_card">
+          <form action="{{ url_for('dose_page')}}" method="post">
+              <div class="row">
+                  <div class="col-lg-3">
+                      <h2>Select district:</h2>
+                      <select class="form-select form-select-lg mb-3" name="district" required>
+                          {% for district in state_districts: %}
+                                <option value="{{ district['district_id'] }}">{{ district['district_name'] }}</option>
+                          {% endfor %}
+                      </select>
+                  </div>
+                  <div class="col-lg-3">
+                      <h2>Select dose:</h2>
+                      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check " name="dose" id="btnradio1" value="1" autocomplete="off" checked>
+                        <label class="label_button btn btn-outline-dark" for="btnradio1">Dose 1</label>
+
+                        <input type="radio" class="btn-check" name="dose" id="btnradio2" value="2" autocomplete="off">
+                        <label class="label_button btn btn-outline-dark" for="btnradio2">Dose 2</label>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-3">
+                      <br>
+                      <br>
+                      <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                          <input type="checkbox" name="under_44" class="btn-check" id="btncheck1" autocomplete="off">
+                          <label class="label_button btn btn-outline-dark" for="btncheck1">Under 44</label>
+                      </div>
+                  </div>
+                  <div class="col-lg-3">
+                      <button class="button btn btn-outline-dark" type="submit">Go</button>
+                  </div>
+              </div>
+      </form>
+      </div>
+    {% block footer %}
+        <footer>&copy; 2021</footer>
+    {% endblock footer %}
+{% endblock %}
